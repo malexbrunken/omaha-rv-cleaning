@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c2430;
+  --navy: #1b2d4f;
+  --navy-deep: #122039;
+  --tan: #c8a878;
+  --tan-light: #efe6d6;
+  --cream: #faf7f1;
+  --muted: #5c6a7d;
+  --accent: #b8862b;
+  --border: #e5decf;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-tan: var(--tan);
+  --color-tan-light: var(--tan-light);
+  --color-cream: var(--cream);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-siteborder: var(--border);
+  --font-sans: var(--font-geist-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-size: 18px; /* senior-friendly base size */
+  line-height: 1.7;
+}
+
+.prose-rv h1 { font-size: 2.25rem; font-weight: 800; color: var(--navy); margin: 0 0 1rem; line-height: 1.15; }
+.prose-rv h2 { font-size: 1.6rem; font-weight: 700; color: var(--navy); margin: 2rem 0 0.75rem; }
+.prose-rv h3 { font-size: 1.25rem; font-weight: 700; color: var(--navy); margin: 1.5rem 0 0.5rem; }
+.prose-rv p { margin: 0 0 1.1rem; }
+.prose-rv ul { margin: 0 0 1.25rem; padding-left: 1.4rem; }
+.prose-rv li { margin-bottom: 0.5rem; }
+.prose-rv a { color: var(--accent); text-decoration: underline; font-weight: 600; }
+.prose-rv strong { color: var(--navy); }

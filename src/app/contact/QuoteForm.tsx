@@ -1,0 +1,69 @@
+"use client";
+
+import { useState } from "react";
+
+export function QuoteForm() {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("failed");
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  if (status === "sent") {
+    return (
+      <div className="bg-cream border-2 border-accent rounded-2xl p-8 text-center">
+        <p className="text-2xl font-bold text-navy mb-2">Thank you! ✅</p>
+        <p className="text-lg">We got your details and will call you back shortly. Talk soon!</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={onSubmit} className="rounded-2xl border-2 border-siteborder p-7 space-y-5">
+      <div>
+        <label htmlFor="name" className="block font-bold text-navy mb-1">Your name</label>
+        <input id="name" name="name" required className="w-full border-2 border-siteborder rounded-lg px-4 py-3.5 text-lg" />
+      </div>
+      <div>
+        <label htmlFor="phone" className="block font-bold text-navy mb-1">Phone number</label>
+        <input id="phone" name="phone" type="tel" required className="w-full border-2 border-siteborder rounded-lg px-4 py-3.5 text-lg" />
+      </div>
+      <div>
+        <label htmlFor="size" className="block font-bold text-navy mb-1">About how long is your RV?</label>
+        <input id="size" name="size" placeholder="e.g. 32-foot fifth wheel" className="w-full border-2 border-siteborder rounded-lg px-4 py-3.5 text-lg" />
+      </div>
+      <div>
+        <label htmlFor="town" className="block font-bold text-navy mb-1">Your town</label>
+        <input id="town" name="town" placeholder="e.g. Elkhorn" className="w-full border-2 border-siteborder rounded-lg px-4 py-3.5 text-lg" />
+      </div>
+      <div>
+        <label htmlFor="notes" className="block font-bold text-navy mb-1">Anything we should know? (optional)</label>
+        <textarea id="notes" name="notes" rows={3} className="w-full border-2 border-siteborder rounded-lg px-4 py-3.5 text-lg" />
+      </div>
+      {status === "error" && (
+        <p className="text-red-700 font-semibold">Sorry — something went wrong. Please call us instead!</p>
+      )}
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="bg-accent text-white font-bold text-lg px-8 py-4 rounded-lg min-h-12 w-full sm:w-auto disabled:opacity-60"
+      >
+        {status === "sending" ? "Sending…" : "Send My Request"}
+      </button>
+    </form>
+  );
+}
