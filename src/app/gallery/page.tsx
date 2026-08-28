@@ -49,18 +49,18 @@ export default function GalleryPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-extrabold text-navy mb-4">Our Work, Around the Metro</h1>
-      <p className="text-lg text-muted mb-10 max-w-3xl">
+      <h1 className="text-4xl font-extrabold text-espresso mb-4">Our Work, Around the Metro</h1>
+      <p className="text-lg text-mist mb-10 max-w-3xl">
         Photos from real jobs are coming as the season rolls on — in the meantime, here&apos;s a sample of the work we do every week
         and the problems we solve. Every job below is a real example of the results our process delivers.
       </p>
       <div className="grid gap-6 md:grid-cols-2">
         {jobs.map((j) => (
-          <div key={j.title} className="rounded-2xl border-2 border-siteborder p-6">
-            <p className="text-sm font-bold text-accent uppercase tracking-wide">{j.town}</p>
-            <h2 className="text-xl font-bold text-navy mb-2">{j.title}</h2>
+          <div key={j.title} className="rounded-2xl border-2 border-line p-6">
+            <p className="text-sm font-bold text-copper uppercase tracking-wide">{j.town}</p>
+            <h2 className="text-xl font-bold text-espresso mb-2">{j.title}</h2>
             <p className="mb-4">{j.text}</p>
-            <Link href={j.service} className="text-accent underline font-semibold">About this service →</Link>
+            <Link href={j.service} className="text-copper underline font-semibold">About this service →</Link>
           </div>
         ))}
       </div>

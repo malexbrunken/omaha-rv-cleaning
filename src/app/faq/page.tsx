@@ -48,22 +48,22 @@ export default function FaqPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <FaqJsonLd faq={faqs} />
-      <h1 className="text-4xl font-extrabold text-navy mb-5">Frequently Asked Questions</h1>
+      <h1 className="text-4xl font-extrabold text-espresso mb-5">Frequently Asked Questions</h1>
       <div className="space-y-6 mt-8">
         {faqs.map((f) => (
           <div key={f.q}>
-            <h2 className="text-xl font-bold text-navy mb-1">{f.q}</h2>
-            <p className="text-muted text-lg">{f.a}</p>
+            <h2 className="text-xl font-bold text-espresso mb-1">{f.q}</h2>
+            <p className="text-mist text-lg">{f.a}</p>
           </div>
         ))}
       </div>
-      <div className="bg-cream border border-siteborder rounded-2xl p-7 mt-10 text-center">
-        <p className="font-bold text-navy text-lg mb-3">Still have a question?</p>
-        <a href={site.phoneHref} className="inline-block bg-accent text-white font-bold px-7 py-3.5 rounded-lg">
+      <div className="bg-cream border border-line rounded-2xl p-7 mt-10 text-center">
+        <p className="font-bold text-espresso text-lg mb-3">Still have a question?</p>
+        <a href={site.phoneHref} className="inline-block bg-copper text-white font-bold px-7 py-3.5 rounded-lg">
           Call {site.phone}
         </a>
         {" "}
-        <Link href="/contact" className="inline-block border-2 border-navy text-navy font-bold px-7 py-3.5 rounded-lg">
+        <Link href="/contact" className="inline-block border-2 border-espresso text-espresso font-bold px-7 py-3.5 rounded-lg">
           Send a message
         </Link>
       </div>

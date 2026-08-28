@@ -33,15 +33,15 @@ export default async function TownPage({ params }: PageProps<"/service-areas/[sl
         { name: "Service Areas", url: `${site.url}/service-areas` },
         { name: t.name, url: `${site.url}/service-areas/${t.slug}` },
       ]} />
-      <nav aria-label="Breadcrumb" className="text-muted mb-4">
-        <Link href="/" className="text-accent hover:underline">Home</Link> ›{" "}
-        <Link href="/service-areas" className="text-accent hover:underline">Service Areas</Link> › {t.name}
+      <nav aria-label="Breadcrumb" className="text-mist mb-4">
+        <Link href="/" className="text-copper hover:underline">Home</Link> ›{" "}
+        <Link href="/service-areas" className="text-copper hover:underline">Service Areas</Link> › {t.name}
       </nav>
 
-      <h1 className="text-4xl font-extrabold text-navy mb-5">{t.headline}</h1>
+      <h1 className="text-4xl font-extrabold text-espresso mb-5">{t.headline}</h1>
       <p className="text-xl mb-8">{t.intro}</p>
 
-      <a href={site.phoneHref} className="inline-block bg-accent text-white font-bold text-lg px-7 py-4 rounded-lg mb-10">
+      <a href={site.phoneHref} className="inline-block bg-copper text-white font-bold text-lg px-7 py-4 rounded-lg mb-10">
         Call {site.phone} — {t.name} quotes in under a minute
       </a>
 
@@ -49,27 +49,27 @@ export default async function TownPage({ params }: PageProps<"/service-areas/[sl
         <p key={i} className="mb-5 text-lg">{p}</p>
       ))}
 
-      <h2 className="text-2xl font-bold text-navy mb-4">We clean near you in {t.name}</h2>
-      <ul className="space-y-2 mb-10 rounded-2xl bg-cream border border-siteborder p-6">
+      <h2 className="text-2xl font-bold text-espresso mb-4">We clean near you in {t.name}</h2>
+      <ul className="space-y-2 mb-10 rounded-2xl bg-cream border border-line p-6">
         {t.anchors.map((a) => (
-          <li key={a} className="flex gap-3"><span className="text-accent font-bold">•</span> {a}</li>
+          <li key={a} className="flex gap-3"><span className="text-copper font-bold">•</span> {a}</li>
         ))}
       </ul>
 
-      <h2 className="text-2xl font-bold text-navy mb-4">Our services</h2>
+      <h2 className="text-2xl font-bold text-espresso mb-4">Our services</h2>
       <ul className="space-y-2 mb-10 text-lg">
-        <li>🧼 <Link href="/services/rv-exterior-washing" className="text-accent underline font-semibold">RV exterior washing</Link> — $7/ft</li>
-        <li>🏠 <Link href="/services/rv-interior-cleaning" className="text-accent underline font-semibold">RV interior cleaning</Link></li>
-        <li>💧 <Link href="/services/rv-steam-sanitization" className="text-accent underline font-semibold">Dry vapor steam sanitizing</Link> — unique in the Omaha area</li>
-        <li>🛏️ <Link href="/services/rv-mattress-cleaning" className="text-accent underline font-semibold">RV mattress steam cleaning</Link></li>
-        <li>🪟 <Link href="/services/rv-detailing" className="text-accent underline font-semibold">Full RV detailing</Link></li>
+        <li>🧼 <Link href="/services/rv-exterior-washing" className="text-copper underline font-semibold">RV exterior washing</Link> — $7/ft</li>
+        <li>🏠 <Link href="/services/rv-interior-cleaning" className="text-copper underline font-semibold">RV interior cleaning</Link></li>
+        <li>💧 <Link href="/services/rv-steam-sanitization" className="text-copper underline font-semibold">Dry vapor steam sanitizing</Link> — unique in the Omaha area</li>
+        <li>🛏️ <Link href="/services/rv-mattress-cleaning" className="text-copper underline font-semibold">RV mattress steam cleaning</Link></li>
+        <li>🪟 <Link href="/services/rv-detailing" className="text-copper underline font-semibold">Full RV detailing</Link></li>
       </ul>
 
-      <h2 className="text-2xl font-bold text-navy mb-4">Also serving nearby</h2>
+      <h2 className="text-2xl font-bold text-espresso mb-4">Also serving nearby</h2>
       <p className="mb-10 text-lg">
         {nearby.map((n, i) => (
           <span key={n.slug}>
-            <Link href={`/service-areas/${n.slug}`} className="text-accent underline font-semibold">RV cleaning in {n.name}</Link>
+            <Link href={`/service-areas/${n.slug}`} className="text-copper underline font-semibold">RV cleaning in {n.name}</Link>
             {i < nearby.length - 1 ? " · " : ""}
           </span>
         ))}

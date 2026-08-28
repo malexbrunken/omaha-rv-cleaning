@@ -1,30 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1c2430;
-  --navy: #1b2d4f;
-  --navy-deep: #122039;
-  --tan: #c8a878;
-  --tan-light: #efe6d6;
-  --cream: #faf7f1;
-  --muted: #5c6a7d;
-  --accent: #b8862b;
-  --border: #e5decf;
+  /* Warm "campfire gold" palette: espresso, cream, copper */
+  --espresso: #221608;
+  --espresso-2: #33200e;
+  --espresso-3: #453014;
+  --cream: #f7f1e5;
+  --cream-2: #efe6d3;
+  --paper: #fbf7ef;
+  --copper: #c07b2a;
+  --copper-bright: #d9963f;
+  --copper-deep: #9c5f1c;
+  --sand: #d9c9a8;
+  --ink-muted: #6d5a43;
+  --line: #e3d7c0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-navy: var(--navy);
-  --color-navy-deep: var(--navy-deep);
-  --color-tan: var(--tan);
-  --color-tan-light: var(--tan-light);
+  --color-espresso: var(--espresso);
+  --color-espresso-2: var(--espresso-2);
+  --color-espresso-3: var(--espresso-3);
   --color-cream: var(--cream);
-  --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --color-siteborder: var(--border);
-  --font-sans: var(--font-geist-sans);
+  --color-cream-2: var(--cream-2);
+  --color-paper: var(--paper);
+  --color-copper: var(--copper);
+  --color-copper-bright: var(--copper-bright);
+  --color-copper-deep: var(--copper-deep);
+  --color-sand: var(--sand);
+  --color-mist: var(--ink-muted);
+  --color-line: var(--line);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-source-sans);
 }
 
 html {
@@ -32,18 +38,59 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--espresso);
+  font-family: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
   font-size: 18px; /* senior-friendly base size */
   line-height: 1.7;
 }
 
-.prose-rv h1 { font-size: 2.25rem; font-weight: 800; color: var(--navy); margin: 0 0 1rem; line-height: 1.15; }
-.prose-rv h2 { font-size: 1.6rem; font-weight: 700; color: var(--navy); margin: 2rem 0 0.75rem; }
-.prose-rv h3 { font-size: 1.25rem; font-weight: 700; color: var(--navy); margin: 1.5rem 0 0.5rem; }
+h1, h2, h3, .font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* subtle grain texture for dark panels */
+.texture-grain {
+  position: relative;
+}
+.texture-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* thin top accent line used on cards/sections */
+.ridge {
+  position: relative;
+}
+.ridge::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--copper), var(--copper-bright));
+  border-radius: 3px 3px 0 0;
+  opacity: 0.9;
+}
+
+.kicker {
+  font-family: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.prose-rv h1 { font-size: 2.35rem; font-weight: 600; color: var(--espresso); margin: 0 0 1rem; line-height: 1.12; }
+.prose-rv h2 { font-size: 1.65rem; font-weight: 600; color: var(--espresso); margin: 2.2rem 0 0.7rem; }
+.prose-rv h3 { font-size: 1.2rem; font-weight: 600; color: var(--espresso-2); margin: 1.6rem 0 0.5rem; font-family: var(--font-source-sans), sans-serif; letter-spacing: 0.01em; }
 .prose-rv p { margin: 0 0 1.1rem; }
 .prose-rv ul { margin: 0 0 1.25rem; padding-left: 1.4rem; }
 .prose-rv li { margin-bottom: 0.5rem; }
-.prose-rv a { color: var(--accent); text-decoration: underline; font-weight: 600; }
-.prose-rv strong { color: var(--navy); }
+.prose-rv a { color: var(--copper-deep); text-decoration: underline; font-weight: 600; text-underline-offset: 2px; }
+.prose-rv strong { color: var(--espresso); }

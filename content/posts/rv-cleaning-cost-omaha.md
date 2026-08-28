@@ -9,10 +9,9 @@ If you've called around Omaha for RV cleaning quotes, you've probably noticed so
 
 ## Typical Omaha-area pricing
 
-- **Exterior wash:** $7 per foot — roughly $170–$280 for a 24–40 foot RV
-- **Full clean (exterior + interior):** $12 per foot — roughly $290–$480
-- **Showroom detail:** $18–$22 per foot — oxidation correction, polish and wax, deep interior work
-- **Mattress and upholstery steam sanitation:** add-on, priced by phone
+- **Exterior wash:** $12 per foot — roughly $290–$480 for a 24–40 foot RV
+- **The Signature (exterior + interior):** $30 per foot — roughly $720–$1,200, including dry-vapor steam sanitation
+- **Focused mattress, oxidation, and coach steam work:** available as quoted add-ons
 
 These match the national picture: most RV owners across the country pay somewhere between $150 and $500 for routine cleaning, and $1,000+ for full restoration work on large motorhomes.
 

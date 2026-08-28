@@ -36,54 +36,45 @@ type Package = {
   features: string[];
 };
 
+// Priced to match the Omaha market benchmark (DriveGlo: $12/ft exterior, $30/ft full detail).
 export const packages: Package[] = [
   {
     name: "Exterior Wash",
-    price: "$7/ft",
-    priceNote: "≈ $170–$280 for a 24–40 ft RV",
-    blurb:
-      "Hand wash, roof wash, wheels, and windows. The regular upkeep your fiberglass needs.",
-    features: [
-      "Hand wash with RV-safe soap",
-      "Roof wash (rubber & fiberglass)",
-      "Wheels, tires & wheel wells",
-      "All exterior glass & door jambs",
-    ],
-  },
-  {
-    name: "Full Clean",
-    popular: true,
     price: "$12/ft",
     priceNote: "≈ $290–$480 for a 24–40 ft RV",
     blurb:
-      "Exterior wash plus a full interior detail — vacuum, surfaces, kitchen and bath, and dry vapor steam sanitizing.",
+      "Full exterior detail: foam bath hand wash, roof, wheels, windows — finished with a protective spray wax.",
     features: [
-      "Everything in the Exterior Wash",
-      "Full interior vacuum & wipe-down",
-      "Kitchen & bathroom sanitize",
-      "Dry vapor steam on high-touch surfaces",
+      "Full exterior foam bath & hand wash",
+      "Roof rinse & wash",
+      "Wheels, tires & wheel wells degreased & dressed",
+      "Exterior window cleaning",
+      "Storage bays wiped down",
+      "Spray wax protective finish",
     ],
   },
   {
-    name: "Showroom Detail",
-    price: "$18–$22/ft",
-    priceNote: "by quote",
+    name: "The Signature",
+    popular: true,
+    price: "$30/ft",
+    priceNote: "≈ $720–$1,200 for a 24–40 ft RV",
     blurb:
-      "Our most thorough service: oxidation removal, polish & wax, deep interior extraction, and full steam sanitation.",
+      "Complete interior and exterior detail — plus our dry vapor steam sanitation, including mattresses. The full reset.",
     features: [
-      "Everything in the Full Clean",
-      "Black streak & oxidation removal",
-      "Polish and protective wax",
-      "Deep interior extraction & UV protectant",
-      "Dry vapor steam mattress sanitation",
+      "Everything in the Exterior Wash",
+      "Full interior vacuum — floors, carpets & upholstery",
+      "Kitchen deep clean (counters, fridge, microwave)",
+      "Bathroom sanitation (shower, toilet, sink)",
+      "Cockpit & dash detailed",
+      "Dry vapor steam sanitize — surfaces, upholstery & mattress",
     ],
   },
 ] as const;
 
 export const addons: { name: string; note?: string }[] = [
-  { name: "Dry Vapor Steam Mattress Cleaning", note: "per mattress" },
-  { name: "Interior Deep Sanitize (full coach)" },
-  { name: "Black Streak Removal" },
-  { name: "Roof Treatment & Inspection" },
-  { name: "Storage-Ready Wash (fall / spring)" },
+  { name: "Dry Vapor Steam Mattress Clean", note: "per mattress" },
+  { name: "Extra Steam Sanitization (full coach)" },
+  { name: "Black Streak Removal (heavy cases)" },
+  { name: "Slide-out Roof & Topper Wash" },
+  { name: "Storage-Ready Winter Prep Wash" },
 ] as const;

@@ -1,84 +1,110 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { packages, addons, site } from "@/lib/site";
+import { QuoteCalc } from "@/components/QuoteCalc";
+import { IconDroplet, IconSparkle } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "RV Cleaning Prices Omaha | Published Per-Foot Pricing",
   description:
-    "Transparent RV cleaning prices for the Omaha metro: exterior wash $7/ft, full clean $12/ft, showroom detail $18–$22/ft. No mystery quotes — see the numbers before you call.",
+    "Transparent RV cleaning prices for the Omaha metro: exterior wash $12/ft and Signature full detail $30/ft. No mystery quotes.",
 };
 
 const faq = [
   {
     q: "How much does RV cleaning cost in Omaha?",
-    a: "For a typical 24–40 foot RV in the Omaha metro, expect roughly $170–$280 for an exterior wash, $290–$480 for a full interior-and-exterior clean, and a quoted price of $18–$22 per foot for our showroom-level detail. Your exact number depends on length and condition — we confirm it by phone before we ever show up.",
+    a: "For a typical 24–40 foot RV in the Omaha metro, expect roughly $290–$480 for our $12-per-foot exterior wash and $720–$1,200 for the $30-per-foot Signature interior-and-exterior detail. Your exact number depends on length and condition — we confirm it before we ever show up.",
   },
   {
     q: "Why publish prices when other companies won't?",
-    a: "Because you deserve to budget before you call. Most detailing companies quote only after seeing the rig. We clean one vehicle type all day, every day, so we know what a job takes — and we're comfortable putting the number on the website.",
+    a: "Because you deserve to budget before you call. Specializing in one vehicle type gives us the experience to price clearly and stand behind the number.",
   },
   {
     q: "Do you charge extra to come to my storage lot?",
-    a: "Not within our normal service area — Omaha, Elkhorn, Valley, Waterloo, Bennington, Gretna, Papillion, La Vista, Millard, and Ashland. We service storage lots all the time; you never need to move your rig.",
+    a: "Not within our normal service area — Omaha, Elkhorn, Valley, Waterloo, Bennington, Gretna, Papillion, La Vista, Millard, and Ashland.",
   },
 ];
 
 export default function PricingPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-extrabold text-navy mb-4">RV Cleaning Prices — Published, Not Hidden</h1>
-      <p className="text-lg text-muted mb-10 max-w-3xl">
-        We price by the foot because that&apos;s what the job actually depends on. These are real numbers for the Omaha metro —
-        the same ones we&apos;ll quote you on the phone.
-      </p>
+    <>
+      <section className="bg-espresso text-cream texture-grain">
+        <div className="relative max-w-6xl mx-auto px-4 py-16 md:py-24">
+          <p className="kicker text-copper-bright mb-4">Clear from the first conversation</p>
+          <h1 className="text-5xl md:text-6xl font-semibold leading-tight max-w-4xl mb-5">Professional care, priced by the foot.</h1>
+          <p className="text-xl text-cream/70 max-w-2xl">Real Omaha pricing, published upfront. Choose a service, enter your RV length, and know the ballpark before you call.</p>
+        </div>
+      </section>
 
-      {packages.map((p) => (
-        <div key={p.name} className={`mb-6 rounded-2xl border-2 p-7 ${p.popular ? "border-accent bg-cream" : "border-siteborder"}`}>
-          <div className="flex flex-wrap justify-between items-baseline gap-3 mb-2">
-            <h2 className="text-2xl font-bold text-navy">
-              {p.name} {p.popular && <span className="text-accent text-base font-bold uppercase tracking-wide ml-2">Most Popular</span>}
-            </h2>
-            <p className="text-3xl font-extrabold text-navy">{p.price}</p>
-          </div>
-          <p className="text-muted text-sm mb-3">{p.priceNote}</p>
-          <p className="mb-4">{p.blurb}</p>
-          <ul className="grid gap-2 sm:grid-cols-2">
-            {p.features.map((f) => (
-              <li key={f} className="flex gap-2"><span className="text-accent font-bold">✓</span> {f}</li>
+      <section className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div className="grid gap-10 lg:grid-cols-[1.45fr_.75fr] items-start">
+          <div className="space-y-6">
+            {packages.map((p, i) => (
+              <article key={p.name} className={`ridge bg-white rounded-2xl border p-7 md:p-8 shadow-sm ${p.popular ? "border-copper shadow-xl shadow-copper/10" : "border-line"}`}>
+                <div className="flex flex-wrap justify-between items-start gap-5 mb-5">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2 text-copper-deep">
+                      {i === 0 ? <IconDroplet /> : <IconSparkle />}
+                      {p.popular && <span className="kicker text-[10px] bg-copper text-white rounded-full px-3 py-1">Best value</span>}
+                    </div>
+                    <h2 className="text-3xl font-semibold">{p.name}</h2>
+                    <p className="text-mist mt-2 max-w-xl">{p.blurb}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-display text-5xl font-semibold text-copper-deep">{p.price}</p>
+                    <p className="text-xs text-mist mt-1 max-w-[180px]">{p.priceNote}</p>
+                  </div>
+                </div>
+                <ul className="grid gap-x-6 gap-y-2.5 border-t border-line pt-5 sm:grid-cols-2 text-[15px]">
+                  {p.features.map((f) => <li key={f} className="flex gap-2"><span className="text-copper font-bold">—</span>{f}</li>)}
+                </ul>
+              </article>
             ))}
-          </ul>
+          </div>
+          <aside className="lg:sticky lg:top-28"><QuoteCalc /></aside>
         </div>
-      ))}
+      </section>
 
-      <h2 className="text-2xl font-bold text-navy mt-12 mb-4">Add-Ons</h2>
-      <ul className="rounded-2xl bg-cream border border-siteborder p-6 space-y-2.5 mb-8">
-        {addons.map((a) => (
-          <li key={a.name} className="flex gap-3 text-lg"><span className="text-accent font-bold">＋</span> {a.name}{a.note ? ` (${a.note})` : ""} — priced by phone</li>
-        ))}
-      </ul>
-
-      <h2 className="text-2xl font-bold text-navy mb-4">Season Pass — our best value</h2>
-      <p className="mb-10">
-        Book three or more washes for the season and save 15% automatically. Most pass holders keep a standing appointment
-        at their storage lot — we show up on schedule and text you a photo when it&apos;s done.{" "}
-        <Link href="/services/rv-storage-washing" className="text-accent underline font-semibold">More on seasonal service →</Link>
-      </p>
-
-      <h2 className="text-2xl font-bold text-navy mb-4">Pricing questions</h2>
-      {faq.map((f) => (
-        <div key={f.q} className="mb-5">
-          <h3 className="font-bold text-lg text-navy">{f.q}</h3>
-          <p className="text-muted">{f.a}</p>
+      <section className="bg-cream-2 border-y border-line py-16">
+        <div className="max-w-6xl mx-auto px-4 grid gap-12 md:grid-cols-2">
+          <div>
+            <p className="kicker text-copper-deep mb-3">Tailor the detail</p>
+            <h2 className="text-3xl font-semibold mb-6">Focused add-ons</h2>
+            <ul className="divide-y divide-line border-y border-line">
+              {addons.map((a) => (
+                <li key={a.name} className="py-4 flex justify-between gap-5">
+                  <span className="font-semibold">{a.name}</span>
+                  <span className="text-sm text-mist text-right">{a.note ?? "By condition"}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="kicker text-copper-deep mb-3">Keep the shine</p>
+            <h2 className="text-3xl font-semibold mb-4">Season pass</h2>
+            <p className="text-mist mb-5">Book three or more washes for the season and save 15%. We can keep a standing appointment at your storage lot, then text when the work is complete.</p>
+            <Link href="/services/rv-storage-washing" className="font-bold text-copper-deep border-b-2 border-copper pb-1">Explore seasonal service →</Link>
+          </div>
         </div>
-      ))}
+      </section>
 
-      <div className="bg-navy text-white rounded-2xl p-8 text-center mt-10">
-        <p className="text-xl font-bold mb-4">Want your exact number?</p>
-        <a href={site.phoneHref} className="inline-block bg-accent text-white font-bold text-lg px-8 py-4 rounded-lg">
-          Call {site.phone}
-        </a>
-        <p className="text-white/70 mt-4">Open {site.hours} · quotes take under a minute</p>
-      </div>
-    </div>
+      <section className="max-w-4xl mx-auto px-4 py-16 md:py-24">
+        <p className="kicker text-copper-deep mb-3">Good questions</p>
+        <h2 className="text-4xl font-semibold mb-8">Before you book</h2>
+        <div className="divide-y divide-line border-y border-line">
+          {faq.map((f) => (
+            <div key={f.q} className="py-6">
+              <h3 className="font-sans font-bold text-lg mb-2">{f.q}</h3>
+              <p className="text-mist">{f.a}</p>
+            </div>
+          ))}
+        </div>
+        <div className="bg-espresso text-cream rounded-2xl p-8 md:p-10 text-center mt-12 texture-grain">
+          <p className="font-display text-3xl font-semibold mb-3">Want the exact number?</p>
+          <p className="text-cream/70 mb-6">Tell us your RV length and condition. Most quotes take under a minute.</p>
+          <a href={site.phoneHref} className="inline-flex bg-copper hover:bg-copper-bright text-white font-bold px-8 py-4 rounded-xl">Call {site.phone}</a>
+        </div>
+      </section>
+    </>
   );
 }

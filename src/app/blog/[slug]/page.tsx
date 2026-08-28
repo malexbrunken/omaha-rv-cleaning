@@ -34,7 +34,7 @@ function renderMarkdown(md: string) {
         parts.push(<strong key={k++}>{full.slice(2, -2)}</strong>);
       } else {
         const lm = full.match(/\[([^\]]+)\]\(([^)]+)\)/)!;
-        parts.push(<Link key={k++} href={lm[2]} className="text-accent underline font-semibold">{lm[1]}</Link>);
+        parts.push(<Link key={k++} href={lm[2]} className="text-copper underline font-semibold">{lm[1]}</Link>);
       }
       rest = rest.slice(m.index! + full.length);
     }
@@ -67,28 +67,28 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
-      <nav aria-label="Breadcrumb" className="text-muted mb-4">
-        <Link href="/" className="text-accent hover:underline">Home</Link> ›{" "}
-        <Link href="/blog" className="text-accent hover:underline">Guides</Link> › {p.title}
+      <nav aria-label="Breadcrumb" className="text-mist mb-4">
+        <Link href="/" className="text-copper hover:underline">Home</Link> ›{" "}
+        <Link href="/blog" className="text-copper hover:underline">Guides</Link> › {p.title}
       </nav>
-      <p className="text-sm font-bold text-accent uppercase tracking-wide mb-1">
+      <p className="text-sm font-bold text-copper uppercase tracking-wide mb-1">
         {p.category} · {new Date(p.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
       </p>
-      <h1 className="text-4xl font-extrabold text-navy mb-6 leading-tight">{p.title}</h1>
+      <h1 className="text-4xl font-extrabold text-espresso mb-6 leading-tight">{p.title}</h1>
       <div className="prose-rv text-lg">{renderMarkdown(p.content)}</div>
 
-      <div className="bg-cream border-2 border-accent rounded-2xl p-7 my-10 text-center">
-        <p className="font-bold text-navy text-xl mb-3">Want this done for you?</p>
-        <a href={site.phoneHref} className="inline-block bg-accent text-white font-bold text-lg px-8 py-4 rounded-lg">
+      <div className="bg-cream border-2 border-copper rounded-2xl p-7 my-10 text-center">
+        <p className="font-bold text-espresso text-xl mb-3">Want this done for you?</p>
+        <a href={site.phoneHref} className="inline-block bg-copper text-white font-bold text-lg px-8 py-4 rounded-lg">
           Call {site.phone}
         </a>
-        <p className="text-muted mt-3">{site.hours} · mobile service across the Omaha metro</p>
+        <p className="text-mist mt-3">{site.hours} · mobile service across the Omaha metro</p>
       </div>
 
-      <h2 className="text-2xl font-bold text-navy mb-4">More guides</h2>
+      <h2 className="text-2xl font-bold text-espresso mb-4">More guides</h2>
       <ul className="space-y-2 text-lg">
         {related.map((r) => (
-          <li key={r.slug}>📖 <Link href={`/blog/${r.slug}`} className="text-accent underline font-semibold">{r.title}</Link></li>
+          <li key={r.slug}>📖 <Link href={`/blog/${r.slug}`} className="text-copper underline font-semibold">{r.title}</Link></li>
         ))}
       </ul>
     </div>
