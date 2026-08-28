@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${sourceSans.variable} h-full antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${fraunces.variable} ${sourceSans.variable} h-full antialiased`}>
       <body className="flex flex-col min-h-screen pb-16 md:pb-0">
         <LocalBusinessJsonLd />
         <Header />

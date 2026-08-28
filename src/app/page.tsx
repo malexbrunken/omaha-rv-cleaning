@@ -108,7 +108,7 @@ export default function HomePage() {
         </div>
         <div className="relative">
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-espresso/20">
-            <Image src="/images/roof-wash.jpg" alt="Freshly washed travel trailer roof gleaming in warm sunlight" fill sizes="(max-width:1024px) 100vw, 55vw" className="object-cover" />
+            <Image src="/images/roof-wash.jpg" alt="Freshly washed travel trailer roof gleaming in warm sunlight" fill loading="eager" sizes="(max-width:1024px) 100vw, 55vw" className="object-cover" />
           </div>
           <div className="absolute -bottom-6 -left-3 md:-left-8 bg-espresso text-cream rounded-2xl p-5 shadow-xl max-w-[250px] texture-grain">
             <IconSun className="w-7 h-7 text-copper-bright mb-2" />
