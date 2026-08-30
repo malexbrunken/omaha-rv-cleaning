@@ -22,6 +22,7 @@ export default function ContactPage() {
           📞 {site.phone}
         </a>
         <p className="text-white/70 mt-3">{site.hours}</p>
+        <a href={`mailto:${site.email}`} className="inline-block text-copper-bright hover:text-white mt-2 transition-colors">{site.email}</a>
       </div>
 
       <h2 className="text-2xl font-bold text-espresso mb-4">Or send us the details</h2>

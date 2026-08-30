@@ -4,10 +4,9 @@ export const site = {
   domain: "omaharvcleaning.com",
   url: "https://omaharvcleaning.com",
   tagline: "Omaha's RV-only cleaning specialists. We come to you.",
-  // TODO: replace with the real business phone number before launch
-  phone: "(402) 555-0199",
-  phoneHref: "tel:+14025550199",
-  email: "hello@omaharvcleaning.com",
+  phone: "(402) 871-0787",
+  phoneHref: "tel:+14028710787",
+  email: "omaharvcleaning@zohomail.com",
   city: "Omaha",
   state: "NE",
   description:

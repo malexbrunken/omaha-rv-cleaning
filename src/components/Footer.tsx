@@ -16,6 +16,7 @@ export function Footer() {
           </p>
           <p className="mb-3 leading-relaxed">{site.tagline}</p>
           <a href={site.phoneHref} className="text-copper-bright font-bold text-lg">{site.phone}</a>
+          <a href={`mailto:${site.email}`} className="block mt-1 text-cream/80 hover:text-copper-bright transition-colors">{site.email}</a>
           <p className="mt-2 text-cream/70">{site.hours}</p>
         </div>
         <div>
