@@ -1,4 +1,5 @@
 ---
+author: "Matthew Brunken"
 title: "How Often Should You Wash Your RV Roof? A Nebraska Owner's Guide"
 date: "2026-08-15"
 category: "Maintenance"
@@ -6,6 +7,8 @@ excerpt: "Your RV's roof is the most important surface you never look at. Here's
 ---
 
 Here's a fact that surprises most RV owners: the black streaks running down your sidewalls don't come from the road. They come from your roof. Rain washes grime, oxidation, and (on rubber roofs) chalky residue off the roof surface, where it sheets down the sides and bakes on. Clean roof, dramatically fewer streaks. It's that simple.
+
+This is one part of a larger exterior-care routine. Our [complete Omaha RV cleaning guide](/blog/rv-cleaning-omaha-guide) explains how roof, sidewall, interior, and seasonal work fit together.
 
 ## How often, for Nebraska?
 

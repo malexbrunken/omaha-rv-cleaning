@@ -1,4 +1,5 @@
 ---
+author: "Matthew Brunken"
 title: "Dust Mites in Your RV: The Allergy Problem Nobody Talks About"
 date: "2026-07-15"
 category: "Health"
@@ -6,6 +7,8 @@ excerpt: "RV mattresses and upholstery are five-star dust mite habitat — a war
 ---
 
 If you wake up in your RV with congestion, itchy eyes, or a scratchy throat that clears up an hour after you're up — and nobody else in the house has a cold — you're probably not allergic to camping. You're allergic to your mattress.
+
+Before focusing on one surface, use our [complete Omaha RV cleaning guide](/blog/rv-cleaning-omaha-guide) to decide how the sleeping area fits into a broader interior reset.
 
 ## Why RVs are dust mite paradise
 

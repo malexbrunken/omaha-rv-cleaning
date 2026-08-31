@@ -70,6 +70,57 @@ export function ServiceJsonLd({ name, description, url }: { name: string; descri
   );
 }
 
+/** Person entity used as the editorial author across the guide library. */
+export function AuthorJsonLd({ name }: { name: string }) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name,
+    url: `${site.url}/about`,
+    worksFor: { "@id": `${site.url}/#business` },
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}
+
+/** Service-area entity connecting editorial pages to the local market. */
+export function ServiceAreaJsonLd() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Mobile RV Cleaning in the Omaha Metro",
+    serviceType: "RV cleaning and detailing",
+    provider: { "@id": `${site.url}/#business` },
+    areaServed: site.areas.map((name) => ({ "@type": "City", name: `${name}, NE` })),
+    url: `${site.url}/service-areas`,
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}
+
+/** Article JSON-LD for evergreen educational content. */
+export function ArticleJsonLd({
+  title,
+  description,
+  url,
+  date,
+  author,
+}: { title: string; description: string; url: string; date: string; author: string }) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    url,
+    datePublished: date,
+    dateModified: date,
+    author: { "@type": "Person", name: author, url: `${site.url}/about` },
+    publisher: { "@id": `${site.url}/#business` },
+    isPartOf: { "@type": "Blog", "@id": `${site.url}/blog` },
+    inLanguage: "en-US",
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}
+
 /** Breadcrumb JSON-LD */
 export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string }[] }) {
   const data = {

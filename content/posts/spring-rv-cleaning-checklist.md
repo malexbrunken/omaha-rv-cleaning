@@ -1,4 +1,5 @@
 ---
+author: "Matthew Brunken"
 title: "Spring RV Cleaning Checklist for Nebraska Owners"
 date: "2026-07-30"
 category: "Seasonal"
@@ -6,6 +7,8 @@ excerpt: "Your rig sat through a Nebraska winter. Here's the right order of oper
 ---
 
 Winter in Nebraska is hard on a stored RV: freeze-thaw cycles work at the sealant, dust settles into every vent, and the interior sits sealed with whatever humidity you closed it up with. A methodical spring wake-up prevents most early-season problems. Here's the order we recommend — it's the same order we work in.
+
+For the full seasonal decision guide, see our [Omaha RV cleaning guide](/blog/rv-cleaning-omaha-guide) before choosing between an exterior wash, interior reset, or combined service.
 
 ## 1. Roof and seals, before anything else
 

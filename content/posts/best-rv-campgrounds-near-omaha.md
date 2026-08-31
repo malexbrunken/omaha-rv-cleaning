@@ -1,4 +1,5 @@
 ---
+author: "Matthew Brunken"
 title: "Best RV Campgrounds Near Omaha: Where Local Rigs Actually Go"
 date: "2026-07-20"
 category: "Local"

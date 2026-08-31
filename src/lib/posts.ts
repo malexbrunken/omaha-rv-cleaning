@@ -8,6 +8,7 @@ export type Post = {
   date: string;
   excerpt: string;
   category: string;
+  author: string;
   content: string;
   draft?: boolean;
 };
@@ -27,6 +28,7 @@ export function getPosts(): Post[] {
       date: data.date ? new Date(data.date).toISOString() : "",
       excerpt: data.excerpt ?? "",
       category: data.category ?? "Guides",
+      author: data.author ?? "Matthew Brunken",
       content,
       draft: !!data.draft,
     } as Post;

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPosts, getPost } from "@/lib/posts";
 import { site } from "@/lib/site";
+import { ArticleJsonLd, AuthorJsonLd, BreadcrumbJsonLd, ServiceAreaJsonLd } from "@/components/JsonLd";
 
 export function generateStaticParams() {
   return getPosts().map((p) => ({ slug: p.slug }));
@@ -64,9 +65,18 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
   const p = getPost(slug);
   if (!p) notFound();
   const related = getPosts().filter((x) => x.slug !== slug).slice(0, 3);
+  const postUrl = `${site.url}/blog/${p.slug}`;
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <ArticleJsonLd title={p.title} description={p.excerpt} url={postUrl} date={p.date} author={p.author} />
+      <AuthorJsonLd name={p.author} />
+      <ServiceAreaJsonLd />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: site.url },
+        { name: "Guides", url: `${site.url}/blog` },
+        { name: p.title, url: postUrl },
+      ]} />
       <nav aria-label="Breadcrumb" className="text-mist mb-4">
         <Link href="/" className="text-copper hover:underline">Home</Link> ›{" "}
         <Link href="/blog" className="text-copper hover:underline">Guides</Link> › {p.title}
@@ -74,7 +84,8 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
       <p className="text-sm font-bold text-copper uppercase tracking-wide mb-1">
         {p.category} · {new Date(p.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
       </p>
-      <h1 className="text-4xl font-extrabold text-espresso mb-6 leading-tight">{p.title}</h1>
+      <h1 className="text-4xl font-extrabold text-espresso mb-3 leading-tight">{p.title}</h1>
+      <p className="text-sm text-mist mb-6">Written by <Link href="/about" className="text-copper underline font-semibold">{p.author}</Link> · Omaha RV Cleaning Co.</p>
       <div className="prose-rv text-lg">{renderMarkdown(p.content)}</div>
 
       <div className="bg-cream border-2 border-copper rounded-2xl p-7 my-10 text-center">

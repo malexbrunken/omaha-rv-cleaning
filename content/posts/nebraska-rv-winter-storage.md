@@ -2,37 +2,42 @@
 title: "How to Store Your RV for a Nebraska Winter (So Spring Isn't Awful)"
 date: "2026-07-25"
 category: "Seasonal"
-excerpt: "What you do in October determines what you find in April. The fall shutdown routine that protects your finish, seals, and interior through freeze-thaw cycles."
+author: "Matthew Brunken"
+excerpt: "What you do before winter storage affects what you find in April. Use this fall cleaning and drying routine to protect your RV's finish and interior."
 ---
 
-Every spring we see the same two categories of RV: the ones that went away clean and dry, and the ones that need three weekends of recovery work. The difference is entirely what happened in October.
+What you do before winter storage affects what you find in April. A clean, dry coach is easier to open in spring than one sealed with road film, food residue, and damp upholstery.
 
-## The exterior: never store it dirty
+## Wash the exterior before storage
 
-This is the single most expensive free decision in RV ownership. Whatever is on the finish when you close it up — road salt, bug remains, tannin stains, bird droppings, black-streak film — sits against the gel coat under snow and ice for five months. That's how temporary staining becomes permanent etching.
+Remove road salt, bug remains, bird droppings, tannin stains, and black-streak film before freeze-thaw cycles and snow keep them against the finish. A storage-ready wash should include the roof, since roof residue can continue to run down clean sidewalls.
 
-- Full hand wash, **roof included**
-- Black-streak treatment while the weather still cooperates
-- Optional protective wax: a winter's worth of grime bonds to the wax instead of the gel coat, and comes off with the spring wash
+- Rinse loose grit before contact washing
+- Use products appropriate for the exterior and roof material
+- Treat black streaks carefully rather than scrubbing aggressively
+- Consider a compatible protective finish
 
-## Seals and tires
+For the full maintenance context, read our [Omaha RV cleaning guide](/blog/rv-cleaning-omaha-guide) and [roof-washing guide](/blog/rv-roof-washing-frequency).
 
-- Inspect roof sealant one last time — winter freeze-thaw works cracks open fast
-- Treat slide-out seals so they don't freeze-stick and tear in spring
-- Tires off dirt if possible, inflated to spec
+## Check seals, awnings, and tires
 
-## The interior: dry, clean, closed
+Inspect roof sealant around vents, air-conditioning units, and edges for cracking or lifting. Look over slide-out seals, awnings, and tires as well. Cleaning will not repair failed sealant, but it can make problems easier to see before storage.
 
-- Air the coach out on a dry fall day before closing it — never seal in dampness
-- **Clean the fridge**, prop the doors open
-- Vacuum thoroughly — food crumbs invite winter guests
-- Consider a final **dry vapor steam sanitation** of mattress and upholstery: you're locking the interior for five months, and you want the biology dead before the lockup, not growing in the dark
-- Moisture absorbers in the coach and fridge
+## Leave the interior clean and dry
 
-## Where it sits
+Before closing the coach:
 
-Indoor storage is ideal, but for outdoor storage in the Omaha area: quality cover (breathable, RV-specific — tarps trap moisture) or at minimum a roof in good condition with clean gutters running away from the site.
+- Air it out on a dry day
+- Vacuum floors, cushions, slide-outs, and accessible storage
+- Clean the refrigerator and prop the doors open when appropriate
+- Remove food and anything that can hold moisture
+- Make sure bathroom and kitchen surfaces are dry
+- Use moisture-control products according to their instructions
 
-## The easy button
+For a used or musty coach, read [how to get a musty smell out of an RV](/blog/used-rv-musty-smell-fix). A low-moisture sanitation service may be useful after the moisture source is addressed, but it is not a replacement for leak repair or mold remediation.
 
-Our [fall storage-ready service](/services/rv-storage-washing) handles the exterior half — wash, roof, streaks, sealant eyes-on — at your home or storage lot, and we book standing October appointments all over the metro. Pair it with the spring freshen-up and your rig never sees a "recovery weekend" again.
+## Think ahead to spring
+
+Outdoor storage is easier when the RV goes away clean and dry. Schedule a spring inspection and wash before the first trip, especially if the rig remains outside through winter. Our [seasonal RV washing service](/services/rv-storage-washing) can be arranged at a home or eligible storage location across the Omaha metro.
+
+[Request a quote for storage-ready service](/contact) or compare the [published RV cleaning prices](/pricing).

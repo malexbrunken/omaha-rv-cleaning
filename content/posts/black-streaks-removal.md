@@ -2,32 +2,36 @@
 title: "Black Streaks on Your RV: What Causes Them and How They Come Off"
 date: "2026-08-05"
 category: "Exterior Care"
-excerpt: "Those dark streaks down the sidewalls aren't dirt from the road. Here's what actually causes black streaks — and the safe way to remove them without scratching gel coat."
+author: "Matthew Brunken"
+excerpt: "Those dark streaks down the sidewalls often start with roof runoff. Here is a careful way to remove them without scratching the finish."
 ---
 
-Black streaks are the #1 cosmetic complaint we hear from Omaha-area RV owners. And almost everyone believes the same wrong thing about them.
+Black streaks are a common cosmetic complaint from Omaha-area RV owners. They often begin at the roofline, window frames, or slide seams rather than on the lower panels where road grime usually collects.
 
-## The myth: "It's road grime"
+Rain can carry roof residue, sealant residue, and airborne grime down the sidewalls. Repeated drying makes the film harder to remove, especially on older gel coat or Filon panels.
 
-Road grime lands on the front and lower panels. Black streaks run down from the roofline, window frames, and slide seams — because that's where they come from. Rain water picks up oxidized roof material, sealant residue, and airborne grime, then channels it down the sidewalls in the same tracks every time. Each drying bakes the film a little deeper into the gel coat. Repeat for a few Nebraska summers and you have stripes that shrug off car-wash soap.
+## Why black streaks are difficult to remove
 
-## Why they're hard to remove
+A streak may be a mix of organic residue and oxidized material bonded to the surface. The finish can be more vulnerable than automotive paint, so aggressive scrubbing can trade a visible stain for a permanently dull panel.
 
-The streak is a bonded film — part organic residue, part oxidized material — sitting on a surface (gel coat or Filon) that scratches if you look at it wrong. The wrong approach causes permanent damage:
+Avoid:
 
-- **Scrubbing with a stiff brush:** micro-scratches that dull the whole panel
-- **Household cleaners and degreasers:** can strip protective wax and etch the finish
-- **Magic erasers:** they're micro-abrasive — fine on a small spot, terrible across a wall
+- **Stiff-brush scrubbing:** it can create micro-scratches across a larger panel.
+- **Household degreasers:** they may strip protection or affect sensitive surfaces.
+- **Magic erasers across a wall:** they are abrasive and are better reserved for carefully tested small areas, if used at all.
 
-## The right process
+## A safer cleaning sequence
 
-1. **Rinse thoroughly first.** Every grain of grit you remove now is a scratch you don't create.
-2. **A dedicated black-streak remover** — formulated to break the bond without attacking the finish underneath.
-3. **Soft microfiber or a wash mitt**, working top to bottom, small sections at a time.
-4. **Protect afterward.** A wax or sealant on the cleaned panel makes the next round of streaks sit on the coating instead of bonding to the surface — they'll rinse off with the next wash.
+1. **Rinse thoroughly first.** Remove loose grit before making contact with the panel.
+2. **Test a small area.** Use an RV-suitable streak remover and follow its label directions.
+3. **Use a soft microfiber towel or wash mitt.** Work from the top down in small sections.
+4. **Rinse and inspect.** Do not let cleaner dry on the panel.
+5. **Protect the cleaned surface.** A compatible wax or sealant can make future washing easier.
 
-## The upstream fix
+If the streaks remain after a careful treatment, the issue may be oxidation, aged sealant, or staining that requires correction rather than more pressure. Our [Omaha RV exterior-washing service](/services/rv-exterior-washing) includes roof and sidewall cleaning, and our [complete Omaha RV cleaning guide](/blog/rv-cleaning-omaha-guide) explains how exterior and interior scopes fit together.
 
-Clean roof, fewer streaks — the roof is the source. (More on that in our [roof washing guide](/blog/rv-roof-washing-frequency).)
+## Fix the source, not only the symptom
 
-Black streak removal is included in our [exterior wash](/services/rv-exterior-washing) spot treatment and fully addressed in our [Showroom Detail](/services/rv-detailing). Three-season-old streaks on a 36-footer is our favorite kind of before-and-after.
+A clean roof can reduce the residue that travels down the sidewalls. Read [how often to wash an RV roof in Nebraska](/blog/rv-roof-washing-frequency), especially if your coach is stored outdoors or travels dusty rural roads.
+
+Black-streak treatment is included in our exterior service scope where appropriate. Heavy oxidation or correction work is quoted after seeing the finish, because the safest process depends on the panel condition.
